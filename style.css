@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background: #020617;
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+}
+
+header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 20px;
+
+  background: #0f172a;
+
+  border-bottom: 2px solid #38bdf8;
+}
+
+header h1 {
+
+  color: #38bdf8;
+}
+
+.status-box {
+
+  background: #111827;
+
+  padding: 10px 20px;
+
+  border-radius: 8px;
+}
+
+#statusText {
+
+  color: #22c55e;
+
+  font-weight: bold;
+}
+
+main {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1.5fr 1fr;
+
+  gap: 20px;
+
+  padding: 20px;
+}
+
+.card {
+
+  background: #0f172a;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 0 10px rgba(56,189,248,0.2);
+}
+
+.card h2 {
+
+  margin-bottom: 20px;
+
+  color: #38bdf8;
+}
+
+input[type='range'] {
+
+  width: 100%;
+
+  margin: 15px 0;
+}
+
+.metrics div {
+
+  margin-bottom: 15px;
+}
+
+.metrics span {
+
+  float: right;
+
+  color: #38bdf8;
+}
+
+canvas {
+
+  width: 100%;
+
+  background: black;
+
+  border-radius: 10px;
+}
+
+#radarCanvas {
+
+  height: 500px;
+}
+
+#spectrumCanvas {
+
+  height: 220px;
+}
+
+#beamCanvas {
+
+  height: 220px;
+}
+
+@media(max-width: 1000px) {
+
+  main {
+
+    grid-template-columns: 1fr;
+  }
+}

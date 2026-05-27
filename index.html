@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Phased Array Radar Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <header>
+
+    <h1>
+      Phased Array Radar Dashboard
+    </h1>
+
+    <div class="status-box">
+      STATUS:
+      <span id="statusText">
+        ACTIVE
+      </span>
+    </div>
+
+  </header>
+
+  <!-- MAIN DASHBOARD -->
+  <main>
+
+    <!-- LEFT PANEL -->
+    <section class="left-panel">
+
+      <div class="card">
+
+        <h2>Radar System</h2>
+
+        <p>
+          Operating Frequency:
+          <span id="freqValue">300</span> GHz
+        </p>
+
+        <input
+          type="range"
+          min="100"
+          max="500"
+          value="300"
+          id="freqSlider"
+        >
+
+        <p>
+          Beam Angle:
+          <span id="angleValue">0</span>°
+        </p>
+
+        <input
+          type="range"
+          min="-90"
+          max="90"
+          value="0"
+          id="angleSlider"
+        >
+
+      </div>
+
+      <div class="card">
+
+        <h2>Array Configuration</h2>
+
+        <p>
+          Antenna Elements:
+          <span id="arrayValue">8</span>
+        </p>
+
+        <input
+          type="range"
+          min="2"
+          max="32"
+          value="8"
+          id="arraySlider"
+        >
+
+      </div>
+
+      <div class="card">
+
+        <h2>OTA Characterization</h2>
+
+        <div class="metrics">
+
+          <div>
+            Signal Strength
+            <span id="signalStrength">
+              92%
+            </span>
+          </div>
+
+          <div>
+            Noise Floor
+            <span>
+              -78 dBm
+            </span>
+          </div>
+
+          <div>
+            Beam Efficiency
+            <span>
+              88%
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CENTER PANEL -->
+    <section class="center-panel">
+
+      <div class="card radar-card">
+
+        <h2>Radar Sweep</h2>
+
+        <canvas id="radarCanvas"></canvas>
+
+      </div>
+
+    </section>
+
+    <!-- RIGHT PANEL -->
+    <section class="right-panel">
+
+      <div class="card">
+
+        <h2>Spectrum Analyzer</h2>
+
+        <canvas id="spectrumCanvas"></canvas>
+
+      </div>
+
+      <div class="card">
+
+        <h2>Beamforming</h2>
+
+        <canvas id="beamCanvas"></canvas>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
